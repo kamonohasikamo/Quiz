@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var label: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,5 +23,14 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func buttonTapped(_ sender: Any) {
+        let answer: String = "b"
+        let inputText: String = textField.text!
+        if inputText == answer {
+            label.text = "正解です"
+        }else {
+            label.text = "不正解です"
+        }
+    }
 }
 
